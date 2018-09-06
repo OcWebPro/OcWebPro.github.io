@@ -1,0 +1,454 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	background-color: #f3f3f3
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+header
+	position: relative
+	background-size: cover
+	background-position: center top
+	min-height: 640px
+	height: 100vh
+	.header-topline
+		padding-top: 40px
+		.logo
+			img
+				height: 60px
+				width: auto
+		.header-right-line
+			text-align: right
+			padding: 20px 0
+			.header-subscribe-wrapp
+				display: inline-block
+				padding: 0 15px
+				border-right: 1px solid #fff
+				.subscribe-text
+					padding-right: 22px
+					display: inline-block
+					background-repeat: no-repeat
+					background-position: center right
+					a
+						font-family: helvetica-light,sans-serif
+						font-size: 11px
+						color: #fff
+						padding-right: 35px
+						border-bottom: 1px solid #fff
+						&:hover,&:active,&:focus
+							text-decoration: none
+			.header-click-wrapp
+				display: inline-block
+				padding: 0 15px
+				border-right: 1px solid #fff
+				a
+					font-family: helvetica-light,sans-serif
+					font-size: 14px
+					color: #fff		
+					text-decoration: underline
+					&:hover
+						text-decoration: none
+			.header-search-wrapp
+				display: inline-block
+				padding: 0 15px
+				border-right: 1px solid #fff
+			.header-lang-wrapp
+				border-right: 1px solid #fff
+				display: inline-block
+				font-size: 14px
+				padding: 0 15px
+				a
+					color: #fff
+					&:hover,&:focus,&:active
+						text-decoration: none
+.content
+	position: relative
+	top: -80px
+	background-color: #fff
+	padding: 60px 0
+	.slider-wrapp
+		.slider
+			position: relative
+			margin-top: 15px
+			.owl-nav
+				position: absolute
+				top: calc(50% - 25px)
+				left: 0
+				width: 100%
+				.owl-prev,.owl-next
+					width: 50px
+					height: 50px
+					border-radius: 50%
+					background-color: #d5b167
+					outline: none
+					color: #fff
+					font-size: 28px
+				.owl-next
+					position: absolute
+					right: -25px
+				.owl-prev
+					position: absolute
+					left: -25px
+			.slide-item
+				img
+					width: 100%
+					height: auto
+		.slider-descr
+			color: #939291
+			font-size: 10px
+			text-align: center
+	.about-school
+		border: 4px solid #d5b167
+		margin: 0 90px
+		margin-top: 50px
+		padding: 60px 80px
+		h3
+			font-size: 20px
+			font-family: helvetica-bold,sans-serif
+			color: #19191a
+		p
+			color: #19191a
+			font-size: 20px
+
+	.socials
+		padding: 50px 0
+		padding-bottom: 0
+		ul
+			padding: 0
+			margin: 0
+			text-align: center
+			li
+				display: inline-block
+				list-style-type: none
+				a
+					text-decoration: none
+					&:hover
+						text-decoration: none
+	.norms
+		margin: 60px 40px
+		padding-bottom: 60px
+		border-bottom: 1px dashed #dedede
+		margin-bottom: 0
+		h3
+			font-size: 20px
+			font-family: helvetica-bold,sans-serif
+			color: #19191a
+			margin-top: 0
+		.norm-text
+			font-size: 15px
+			color: #19191a
+		.norm-sidebar
+			.review
+				margin-bottom: 60px
+				.review-body
+					background-color: #d5b167
+					padding: 20px
+					position: relative	
+					&::after
+						content: ''
+						position: absolute
+						bottom: -59px
+						left: calc(50% - 30px)
+						border: 30px solid transparent
+						border-top: 30px solid #d5b167							
+					.review-text
+						font-family: helvetica-bold,sans-serif
+						font-size: 15px
+						color: #fff
+
+				.review-photo
+					margin-top: 50px
+					text-align: center
+					img
+						display: inline-block
+				.review-name
+					margin-top: 15px
+					font-size: 24px
+					font-family: helvetica-bold,sans-serif
+					color: #939291
+					text-align: center
+				.review-descr
+					font-size: 15px
+					color: #a1a1a1
+					text-align: center
+
+	.post
+		padding: 0 40px
+		.post-header
+			font-family: helvetica-light,sans-serif
+			font-size: 12px
+			color: #939291
+			ul
+				padding: 0
+				margin: 0
+				li
+					list-style-type: none
+					display: inline-block
+					margin: 0
+					font-family: helvetica-light,sans-serif
+					padding: 10px 30px
+					border-right: 1px dashed #e4e4e4
+					&:last-child
+						border: none
+					&:first-child
+						padding-left: 0
+		.post-title
+			h1
+				font-size: 39px
+				font-family: helvetica-bold,sans-serif
+				color: #19191a
+				line-height: 50px
+				margin-bottom: 0
+		.post-content
+			.post-content-text
+				color: #19191a
+				font-size: 20px
+				font-family: helvetica-light,sans-serif
+				border-bottom: 2px dashed #dfdfdf
+				padding: 60px 0
+		.another-post-content
+			h2
+				font-family: helvetica-bold, sans-serif
+				color: #19191a
+				font-size: 20px
+			.another-post-content-text
+				color: #19191a
+				font-family: helvetica-light, sans-serif
+				font-size: 15px
+		.post-content-sidebar
+			padding: 60px	0
+			.new
+				padding-bottom: 20px
+				border-bottom: 1px dashed #d2d2d2
+				.new-header
+					padding-left: 40px
+					font-size: 20px
+					font-family: helvetica-light,sans-serif
+					color: #939291
+					background-image: url('/img/new.png')
+					background-position: left center
+					background-repeat: no-repeat
+			.new-items
+				.new-item
+					padding: 30px 0
+					border-bottom: 1px dashed #d2d2d2
+					&:last-child
+						border-bottom: none
+					.item-text
+						color: #19191a
+						font-size: 15px
+						font-family: helvetica-bold,sans-serif
+					.item-date
+						color: #939291
+						font-size: 10px
+						font-family: helvetica-light,sans-serif
+			.review
+				margin-top: 60px
+				.review-body
+					background-color: #d5b167
+					padding: 20px
+					position: relative	
+					&::after
+						content: ''
+						position: absolute
+						bottom: -59px
+						left: calc(50% - 30px)
+						border: 30px solid transparent
+						border-top: 30px solid #d5b167				
+					.review-text
+						font-family: helvetica-bold,sans-serif
+						font-size: 15px
+						color: #fff
+				.review-photo
+					margin-top: 50px
+					text-align: center
+					img
+						display: inline-block
+				.review-name
+					margin-top: 15px
+					font-size: 24px
+					font-family: helvetica-bold,sans-serif
+					color: #939291
+					text-align: center
+				.review-descr
+					font-size: 15px
+					color: #a1a1a1
+					text-align: center
+.view-more
+	h2
+		color: #939291
+		font-size: 20px
+		text-transform: uppercase
+	.post
+		position: relative
+		.post-content
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			.post-rubrik
+				position: absolute
+				top: 20px
+				left: 20px
+				font-size: 12px
+				color: #fff
+			.post-text
+				position: absolute
+				bottom: 20px
+				left: 20px
+				color: #fff
+				font-size: 30px
+				font-family: helvetica-bold,sans-serif
+				h3
+					margin: 0
+					line-height: 40px
+				span
+					font-family: helvetica-light,sans-serif
+					font-size: 12px
+		a
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			z-index: 2
+		img
+			width: 100%
+			height: auto
+	.sidebar
+		.new-items
+			.new-item
+				padding: 30px 0
+				border-bottom: 1px dashed #d2d2d2
+				&:last-child
+					border-bottom: none
+				&:first-child
+					padding-top: 0
+				.item-text
+					color: #19191a
+					font-size: 15px
+					font-family: helvetica-bold,sans-serif
+				.item-date
+					color: #939291
+					font-size: 10px
+					font-family: helvetica-light,sans-serif
+.subscribe
+	background-color: #355e43
+	margin-top: 80px
+	padding: 80px 250px
+	margin-bottom: 90px
+	h3
+		color: #fff
+		font-size: 30px
+		font-family: helvetica-bold,sans-serif
+		margin: 0
+	p
+		margin-top: 0
+		color: #fff
+		font-size: 30px
+	form
+		.input-wrapp
+			position: relative
+			padding-right: 60px
+			padding-bottom: 10px
+			input
+				border: none
+				outline: none
+				background-color: transparent
+				width: 100%
+				display: inline-block
+				border-bottom: 2px solid #c0ccc4
+				font-style: italic
+				color: #fff
+				font-size: 18px
+				&::placeholder
+					color: #fff
+			.button
+				position: absolute
+				right: 0
+				bottom: 0
+				width: 45px
+				height: 45px
+				background-color: #fff
+				border-radius: 50%
+				text-align: center
+				.fa
+					display: inline-block
+					line-height: 45px
+					font-size: 28px
+					color: #a1a1a1
+footer
+	background-color: #363a39
+	color: #a1a1a1
+	font-size: 16px
+	padding: 45px 0
+	.contacts-wrapp
+		text-align: right
+		.contacts
+			font-size: 15px
+			display: inline-block
+			padding: 0 25px
+			border-left: 1px solid #a1a1a1
+		.socials
+			display: inline-block
+			padding: 0 25px
+			border-left: 1px solid #a1a1a1
+			img
+				vertical-align: baseline
+				&:last-child
+					margin-left: 15px
+
+@import "media" // Всегда в конце
